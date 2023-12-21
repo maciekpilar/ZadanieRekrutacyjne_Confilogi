@@ -1,0 +1,96 @@
+@import "/app/styles/colors";
+@import "/app/styles/breakpoints";
+@import "/app/styles/typography";
+
+.downoladWrapper {
+  max-width: $maxWidth1200;
+  margin: 144px auto 0;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    margin-top: 250px;
+  }
+
+  .downloadHeadingWrapper {
+    margin: 0 32px;
+
+    .downloadHeader {
+      @include fontH2_24;
+      margin-bottom: 10px;
+    }
+
+    .downloadParagraph {
+      @include fontParagraph_15;
+
+      @media screen and (min-width: $breakpointDesktop) {
+        max-width: 550px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .downloadCardsWrapper {
+    margin: 40px auto 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+
+    @media screen and (min-width: $breakpointDesktop) {
+      flex-direction: row;
+    }
+  }
+
+  // Card
+  .downloadCard {
+    max-width: 275px;
+    box-shadow: 2px 2px 5px $grayColor;
+    border-radius: 10px;
+
+    @media screen and (min-width: $breakpointDesktop) {
+      &:first-child {
+        margin-top: 0px;
+      }
+
+      &:nth-child(2) {
+        margin-top: 60px;
+      }
+
+      &:nth-child(3) {
+        margin-top: 120px;
+      }
+    }
+
+    .downloadCardImage {
+      display: flex;
+      justify-content: center;
+      padding: 40px 0 24px;
+
+      img {
+        width: 96px;
+        height: 96px;
+      }
+    }
+
+    .downloadCardTitle {
+      @include fontH2_20;
+      margin-bottom: 6px;
+    }
+
+    .downloadCardDescription {
+      @include fontParagraph_15;
+      margin-bottom: 32px;
+    }
+
+    .downloadCardDots {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .downloadCardButton {
+      padding: 24px;
+    }
+  }
+}

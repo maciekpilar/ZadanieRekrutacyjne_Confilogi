@@ -1,0 +1,107 @@
+@import "/app/styles/colors";
+@import "/app/styles/breakpoints";
+@import "/app/styles/typography";
+
+.accordionWrapper {
+  font-family: inherit;
+  margin: 132px 32px 0;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    max-width: 600px;
+    margin: 180px auto 0;
+  }
+
+  .faqHeadingWrapper {
+    .faqHeader {
+      margin-bottom: 18px;
+      @include fontH2_24;
+    }
+
+    .faqParagraph {
+      @include fontParagraph_15;
+      margin-bottom: 52px;
+    }
+  }
+}
+
+.accordionElement {
+  font-family: inherit;
+  font-size: 15px;
+  padding: 0 0px !important;
+  margin: 0 0px !important;
+  border: none;
+  box-shadow: none;
+  border-bottom: 1px solid $grayColor;
+
+  &::before {
+    display: none;
+  }
+
+  @media screen and (min-width: $breakpointDesktop) {
+    &:hover {
+      .accordionHeader {
+        transition: all 150ms;
+        color: $specialColor;
+      }
+    }
+  }
+}
+.accordionElementActive {
+  padding: 0;
+  margin: 0;
+}
+
+.accordionIcon {
+  color: $primaryColor;
+  width: 32px;
+  height: 32px;
+  font-weight: 800;
+}
+
+.accordionIconActive {
+  color: $specialColor;
+  width: 32px;
+  height: 32px;
+  transition: all 150ms;
+
+  &:active {
+    color: $primaryColor;
+  }
+}
+
+.accordionHeader {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    padding: 4px 0;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.accordionDescriptionBox {
+  padding: 0 0px;
+  margin: 8px 40px 32px 0px;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    font-size: 18px;
+  }
+}
+
+.accordionDescription {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: left;
+  color: $grayColor;
+  line-height: 1.6rem;
+}
+
+.faqButtonBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+}

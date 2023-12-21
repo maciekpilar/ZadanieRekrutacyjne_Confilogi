@@ -1,0 +1,139 @@
+@import "/app/styles/colors";
+@import "/app/styles/breakpoints";
+@import "/app/styles/typography";
+
+.navbar {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.navbarMobile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 32px;
+}
+
+.navbarMobileMenu {
+  display: block;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    display: none;
+  }
+}
+
+.navbarMobileMenuWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 48px;
+}
+
+.navbarMobileHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 32px;
+}
+
+.navbarMobileButton {
+  display: flex;
+
+  img {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media screen and (min-width: $breakpointDesktop) {
+    display: none;
+  }
+}
+
+.navbarMobileMenuOpen {
+  z-index: 100;
+  opacity: 0.95;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $darkBlueColor;
+  transition: ease-in 300ms;
+}
+
+.navbarMobileMenuClosed {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  transition: ease-in 300ms;
+}
+
+.navbarMobileList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 32px;
+}
+
+.navbarMobileList_item {
+  width: 100%;
+  padding: 16px 0;
+  border-bottom: 1px solid $grayColor;
+  @include fontNavbar_18;
+
+  &:first-of-type {
+    border-top: 1px solid $grayColor;
+  }
+}
+
+.navbarMobileLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 42px;
+}
+
+.navbarMobileLogin_button {
+  width: 100%;
+  margin: 24px 32px 0;
+  padding: 12px 0;
+  border: 2px solid #fff;
+  border-radius: 8px;
+
+  @include fontNavbar_18;
+  font-weight: 500;
+}
+
+.navbarDesktop {
+  display: none;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbarDesktopLink {
+    @include fontNavbar_14;
+    margin-right: 40px;
+  }
+
+  .navbarDesktopButton {
+    width: 110px;
+
+    button {
+      text-transform: uppercase !important;
+    }
+  }
+}
+
+.navbarMobileCloseButton img {
+  width: 20px;
+  height: 20px;
+}

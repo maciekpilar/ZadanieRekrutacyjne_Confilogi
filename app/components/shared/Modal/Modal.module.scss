@@ -1,0 +1,137 @@
+@import "/app/styles/colors";
+@import "/app/styles/breakpoints";
+@import "/app/styles/typography";
+
+.modalActiveSpace {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100vw;
+  height: 50px;
+  // background-color: red;
+  // opacity: 0.2;
+}
+
+.modalBox {
+  opacity: 1 !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 40px 26px 40px 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  box-shadow: 2px 2px 10px black;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    padding: 40px 40px 0px 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    max-width: 800px;
+    max-height: 1400px;
+  }
+
+  .modalCloseButton {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    cursor: pointer;
+
+    button {
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+
+  .featureTabsBox {
+    position: relative;
+    margin: 0 auto;
+    @media screen and (min-width: $breakpointDesktop) {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+    }
+  }
+
+  .featureImageBox {
+    // margin: 68px 0 0;
+    height: 320px;
+
+    @media screen and (min-width: $breakpointDesktop) {
+      width: 50%;
+    }
+  }
+
+  .featureShapeImage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 314px;
+      height: 234px;
+    }
+  }
+
+  .featureActiveTabBox {
+    @media screen and (min-width: $breakpointDesktop) {
+      width: 50%;
+      margin: auto;
+      margin-left: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  .featureTabHeader {
+    @include fontH2_24;
+    font-weight: 600;
+
+    @media screen and (min-width: $breakpointDesktop) {
+      text-align: start;
+    }
+  }
+
+  .featureTabParagraph {
+    margin: 0 32px;
+    @include fontParagraph_15;
+
+    @media screen and (min-width: $breakpointDesktop) {
+      text-align: start;
+      max-width: 500px;
+      margin: 0;
+    }
+  }
+
+  .buttonBox {
+    display: block;
+    margin: 40px auto;
+    padding: 0 32px;
+    max-width: 500px;
+
+    @media screen and (min-width: $breakpointDesktop) {
+      margin: 0;
+      max-width: width;
+      padding: 0;
+    }
+  }
+}
+
+.shapeWrapper {
+  position: absolute;
+  left: -40px;
+  top: 80px;
+  z-index: -1;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    bottom: -60px;
+    left: 0;
+  }
+}

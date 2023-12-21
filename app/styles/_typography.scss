@@ -1,0 +1,85 @@
+@import "./colors";
+@import "./breakpoints";
+
+@mixin fontH1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: $darkBlueColor;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    font-size: 50px;
+    line-height: 1;
+  }
+}
+
+@mixin fontH2_24 {
+  font-size: 24px;
+  font-weight: 700;
+  color: $darkBlueColor;
+  text-align: center;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    font-size: 36px;
+  }
+}
+
+@mixin fontH2_20 {
+  font-size: 20px;
+  font-weight: 500;
+  color: $darkBlueColor;
+  text-align: center;
+}
+
+@mixin fontParagraph_16 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $grayColor;
+  text-align: center;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    font-size: 18px;
+  }
+}
+
+@mixin fontParagraph_15 {
+  font-size: 15px;
+  font-weight: 400;
+  color: $grayColor;
+  text-align: center;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    font-size: 18px;
+  }
+}
+
+@mixin fontNavbar_18 {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin fontNavbar_14 {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: $darkBlueColor;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 150ms;
+
+  &:hover {
+    color: $specialColor;
+  }
+}
+
+@mixin fontFooter_14 {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #fff;
+  text-align: center;
+}

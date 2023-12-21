@@ -1,0 +1,148 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+// @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// @import "./colors";
+// @import "./breakpoints";
+
+// // Variables
+// $shapeHeightMobile: 200px;
+// $shapeHeightDesktop: 300px;
+// $shapeWidthMobile: 75%;
+// $shapeWidthDesktop: 45%;
+
+// // ===== Reset default settings =====
+// html {
+//   box-sizing: border-box;
+//   font-size: 16px;
+// }
+
+// *,
+// *:before,
+// *:after {
+//   box-sizing: inherit;
+// }
+
+// body,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p,
+// ol,
+// ul {
+//   margin: 0;
+//   padding: 0;
+//   font-weight: normal;
+// }
+
+// ol,
+// ul {
+//   list-style: none;
+// }
+
+// body {
+//   font-size: 18px; //Our font-size
+// }
+
+// // Skewed CSS made shapes
+// .shapeSkewedRight {
+//   width: $shapeWidthMobile;
+//   height: $shapeHeightMobile;
+//   background-color: $primaryColor;
+//   border-top-right-radius: 1/2 * $shapeHeightMobile;
+//   border-bottom-right-radius: 1/2 * $shapeHeightMobile;
+
+//   @media screen and (min-width: $breakpointDesktop) {
+//     width: $shapeWidthDesktop;
+//     height: $shapeHeightDesktop;
+//     background-color: $primaryColor;
+//     border-top-right-radius: 1/2 * $shapeHeightDesktop;
+//     border-bottom-right-radius: 1/2 * $shapeHeightDesktop;
+//   }
+// }
+
+// .shapeSkewedLeft {
+//   width: $shapeWidthMobile;
+//   height: $shapeHeightMobile;
+//   background-color: $primaryColor;
+//   border-top-left-radius: 1/2 * $shapeHeightMobile;
+//   border-bottom-left-radius: 1/2 * $shapeHeightMobile;
+
+//   @media screen and (min-width: $breakpointDesktop) {
+//     width: $shapeWidthDesktop;
+//     height: $shapeHeightDesktop;
+//     border-top-left-radius: 1/2 * $shapeHeightDesktop;
+//     border-bottom-left-radius: 1/2 * $shapeHeightDesktop;
+//   }
+// }
+
+// .shapeModal {
+//   width: 70%;
+//   height: 200px;
+//   background-color: $primaryColor;
+//   border-top-right-radius: 1/2 * $shapeHeightMobile;
+//   border-bottom-right-radius: 1/2 * $shapeHeightMobile;
+
+//   @media screen and (min-width: $breakpointDesktop) {
+//     width: 250px;
+//   }
+// }
+
+// // Buttons
+// .primaryButton {
+//   padding: 10px 12px;
+//   background-color: $primaryColor;
+//   font-size: 14px;
+//   font-weight: 500;
+//   color: #fff;
+//   border-radius: 4px;
+//   border: 2px solid $primaryColor;
+//   cursor: pointer;
+
+//   &:hover {
+//     background-color: #fff;
+//     color: $primaryColor;
+//     transition: all 150ms;
+//   }
+// }
+
+// .secondaryButton {
+//   padding: 10px 12px;
+//   background-color: $specialColor;
+//   font-size: 14px;
+//   font-weight: 500;
+//   color: #fff;
+//   border-radius: 4px;
+//   border: 2px solid $specialColor;
+//   cursor: pointer;
+
+//   &:hover {
+//     background-color: #fff;
+//     color: $specialColor;
+//     transition: all 150ms;
+//   }
+// }
+
+// .outlinedButton {
+//   padding: 10px 12px;
+//   background-color: #fff;
+//   box-shadow: 1px 1px 3px $grayColor;
+//   font-size: 14px;
+//   font-weight: 600;
+//   color: $grayColor;
+//   border-radius: 4px;
+//   border: 3px solid #fff;
+//   cursor: pointer;
+
+//   &:hover {
+//     background-color: #fff;
+//     color: $grayColor;
+//     transition: all 150ms;
+//     border-color: $grayColor;
+//   }
+// }

@@ -1,0 +1,76 @@
+@import "/app/styles/colors";
+@import "/app/styles/breakpoints";
+@import "/app/styles/typography";
+
+.footerWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 48px 0;
+  background-color: $darkBlueColor;
+}
+
+.footer {
+  max-width: $maxWidth1200;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .footerLeftSide {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media screen and (min-width: $breakpointDesktop) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .footerLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $breakpointDesktop) {
+      flex-direction: row;
+    }
+
+    .footerDesktopLink {
+      @include fontFooter_14;
+
+      @media screen and (min-width: $breakpointDesktop) {
+        &:hover {
+          color: $specialColor;
+        }
+      }
+    }
+  }
+
+  .footerSocialIcons {
+    display: flex;
+    flex-direction: row;
+    gap: 42px;
+
+    .footerSocialIcon {
+      fill: #fff;
+      color: #fff;
+      @media screen and (min-width: $breakpointDesktop) {
+        svg:hover {
+          fill: $specialColor !important;
+          color: $specialColor !important;
+        }
+      }
+    }
+  }
+}

@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+Aplikacja jako zadanie potwierdzająca umiejętności do firmy Confilongi na stanowisko Junior Frontend Developera
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Wykorzystane technologie
 
-## Available Scripts
+1. React (wraz z Next.js),
+2. SASS jako preprocesor CSS (w tym zadaniu moduły),
+3. MUI - Wystylowany komponent w FAQ,
+4. Formik - walidacja formularza wraz z obsługą błędów,
 
-In the project directory, you can run:
+O projekcie:
+Projekt jest odwzorowaniem landingpage'u z wysłanego designu (przesłanego we dwóch wielkościach: 375px, 1440px).
 
-### `npm start`
+Komponenty zostały podzielone na dwie sekcje:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- /shared (dzielone): które mogą być wielokrotnie używane lub występują na wielu stronach
+- /home: czyli, te które występują jedynie na stronie głównej (np. sekcje strony)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Wszystkie komponenty podzielone są na foldery a w tych na dwa pliki: .tsx oraz .module.css
 
-### `npm test`
+Elementy reużywalne przyjmują propsy i są możliwe do rozwinięcia dla dalszej części projektu.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Formularz kontaktowy wyświetla dwa błędy:
 
-### `npm run build`
+- gdy użytkownik próbuje przesłać pusty formularz,
+- gdy użytkownik próbuje podać błędny email (np. bez "@").
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Licznik "... already joined" odlicza od 35.000 do 0 w ciągu 20s.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Niebieskie kształty zaokrąglone z prawej/lewej strony zostały wykonane przy pomocy kodu.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ikony w footerze (Facebook oraz Twitter) zmieniają kolor przy pomocy CSS (fill).
 
-### `npm run eject`
+Modal (pop-up) wyświetla się raz w zależności od działań użytkownika (aby wyświetlić ponownie odśwież stronę):
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Po 30s na stronie
+2. Po najechaniu kursorem na górną część strony (100px od samej góry)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Osobiście z wykonania zadania jestem zadowolony, jednocześnie świadom, że zadanie można zrobić dokładniej, jednakże ograniczał mnie czas po obecnej pracy.

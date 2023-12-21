@@ -1,0 +1,172 @@
+@import "/app/styles/colors";
+@import "/app/styles/breakpoints";
+@import "/app/styles/typography";
+
+.featureWrapper {
+  margin-top: 142px;
+  position: relative;
+
+  .featureHeadingWrapper {
+    margin: 0 32px;
+
+    .featureHeader {
+      @include fontH2_24;
+      margin-bottom: 10px;
+    }
+
+    .featureParagraph {
+      @include fontParagraph_15;
+
+      @media screen and (min-width: $breakpointDesktop) {
+        width: 550px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .featureTabs {
+    text-align: center;
+    margin: 38px 32px 0;
+    max-width: 800px;
+    cursor: pointer;
+
+    @media screen and (min-width: 864px) {
+      margin: 38px auto 0;
+    }
+
+    @media screen and (min-width: $breakpointDesktop) {
+      display: flex;
+      justify-content: center;
+      margin: 60px auto 0;
+    }
+
+    .featureTab {
+      position: relative;
+      color: $grayColor;
+      padding: 12px 0;
+      border-bottom: 1px solid $grayColor;
+      &:first-of-type {
+        border-top: 1px solid $grayColor;
+      }
+
+      @media screen and (min-width: $breakpointDesktop) {
+        padding: 0 30px 12px;
+        flex: 1;
+
+        &:hover {
+          color: $specialColor;
+          transition: all 150ms;
+        }
+
+        &:first-of-type {
+          border-top: none;
+        }
+      }
+    }
+
+    .featureActiveTab {
+      color: $darkBlueColor;
+    }
+
+    .featureActiveTabDecor {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 50%;
+      height: 5px;
+      margin: 0 auto;
+      background: $specialColor;
+
+      @media screen and (min-width: $breakpointDesktop) {
+        width: 100%;
+      }
+    }
+  }
+
+  .featureImageBox {
+    margin: 68px 0 0;
+    height: 320px;
+
+    @media screen and (min-width: $breakpointDesktop) {
+      width: 50%;
+    }
+  }
+
+  .featureShapeImage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 314px;
+      height: 234px;
+
+      @media screen and (min-width: $breakpointDesktop) {
+        width: 500px;
+        height: 350px;
+      }
+    }
+  }
+
+  .featureTabHeader {
+    @include fontH2_24;
+    font-weight: 600;
+
+    @media screen and (min-width: $breakpointDesktop) {
+      text-align: start;
+    }
+  }
+
+  .featureTabParagraph {
+    margin: 0 32px;
+    @include fontParagraph_15;
+
+    @media screen and (min-width: $breakpointDesktop) {
+      text-align: start;
+      max-width: 500px;
+      margin: 0;
+    }
+  }
+
+  .buttonBox {
+    display: none;
+
+    @media screen and (min-width: $breakpointDesktop) {
+      display: block;
+    }
+  }
+}
+
+.featureTabsBox {
+  margin: 0 auto;
+  @media screen and (min-width: $breakpointDesktop) {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+  }
+}
+
+.featureActiveTabBox {
+  @media screen and (min-width: $breakpointDesktop) {
+    width: 50%;
+    margin: auto;
+    padding-top: 60px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.shapeWrapper {
+  position: absolute;
+  left: 0;
+  bottom: 150px;
+  z-index: -1;
+
+  @media screen and (min-width: $breakpointDesktop) {
+    bottom: -110px;
+    left: -10px;
+  }
+}
